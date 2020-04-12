@@ -1,0 +1,124 @@
+h1{
+   font-family: Asap Condensed regular 400;
+   color: #FFFFFF; 
+     text-align: center;
+     font-size:85px;
+}
+
+
+p{
+   font-family:Century Gothic ;
+   color: #FFFFFF;
+   text-align: center; 
+  font-size:18px;
+}
+
+h2{
+        font-family: Century Gothic;
+        color: #ffffff;
+        text-align: center;
+        font-size:45px;
+        font-weight: bold;
+       } 
+
+h3{
+ font-family: Century Gothic;
+        color: #ffffff;
+        text-align: center;
+        font-size:35px;
+        font-weight: bold; 
+        text-decoration: underline;
+}
+img{
+ Display:block;
+ margin-left:auto;
+margin-right:auto;
+}
+  .container-fluid {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+  .
+
+p1{
+   font-family: Century Gothic ;
+   color: #FFFFFF;
+   text-align: center; 
+  font-size:5px;
+}
+
+  .bg-1 { 
+    background-color: #003380; 
+    color: #ffffff;
+  }
+  .bg-2 { 
+    background-color: #474e5d; 
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #003380; 
+    color: #fffff;
+  }
+  .bg-5 { 
+    background-color: #474e5d; 
+    color: #ffffff;
+  }
+a{
+  margin: 0 20px;
+  width: 80px;
+  height: 80px;
+  background-color: #ccc;
+  display: inline-block;
+  border-radius: 24px;
+  box-shadow: 6px 6px 12px rgba(0,0,0,.15),
+              -6px -6px 12px rgba(255,255,255,.1);
+  overflow: hidden;
+  font-size: 28px;
+  transition: .3s linear;
+  position: relative;
+}
+
+a:hover{
+  transform: scale(1.3);
+  border-radius: 50%;
+}
+
+a i::before{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-size: 200% 200%;
+  background-position: 75% 75%;
+  top: 0;
+  left: 0;
+  line-height: 80px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background .5s linear;
+}
+
+a:hover i::before{
+  background-position: 0% 0%;
+}
+
+.fa-facebook-f::before{
+  background-image: linear-gradient(135deg,#3b5998 30%,#0a3d62 50%);
+
+}
+
+.fa-instagram::before{
+  background-image: linear-gradient(135deg,#c32aa3 30%,#0a3d62 50%);
+}
+
+
+.fa-linkedin-in::before{
+  background-image: linear-gradient(135deg,#007bb5 30%,#0a3d62 50%);
+}
+.wrapper{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 0 20px;
+}
