@@ -115,6 +115,11 @@ a:hover i::before{
 .fa-linkedin-in::before{
   background-image: linear-gradient(135deg,#007bb5 30%,#0a3d62 50%);
 }
+.fa-envelope::before{
+  background-image: linear-gradient(135deg,#cda632 30%,#0a3d62 50%);
+} 
+  
+}
 .wrapper{
   position: absolute;
   top: 50%;
@@ -122,3 +127,4 @@ a:hover i::before{
   width: 100%;
   padding: 0 20px;
 }
+
