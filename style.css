@@ -1,5 +1,16 @@
+ody{ 
+      background: url(https://cdn.glitch.com/49ca62ab-7d51-4a99-9149-bc3c7718cffe%2F86a1a574-9301-4b56-ba68-e0c26cda8cca.image.png?v=1611099078404) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+     text-align: center;
+
+} 
+      
+
 h1{
-   font-family: Asap Condensed regular 400;
+    font-family: 'Josefin Sans', sans-serif;
    color: #FFFFFF; 
      text-align: center;
      font-size:85px;
@@ -7,124 +18,209 @@ h1{
 
 
 p{
-   font-family:Century Gothic ;
-   color: #FFFFFF;
+   font-family: 'Catamaran', sans-serif;
+   color: #be9749;
    text-align: center; 
-  font-size:18px;
+  font-size:17px;
 }
 
 h2{
-        font-family: Century Gothic;
+       font-family: 'Catamaran', sans-serif;
         color: #ffffff;
         text-align: center;
         font-size:45px;
         font-weight: bold;
-       } 
+  }
+.box {
+ 
+  border-radius: 25px; /*border box size*/
+  backdrop-filter: blur(8px); /*blur filter for text*/
+  max-width: 100%;
+  max-height: 100%;
+background-color:rgb(0,0,0,0.5);
+border: 2px solid rgba(255,255);
+box-shadow: 5px 15px 30px -10px rgb(0,0,0,);
+overflow:hidden;
+}
 
 h3{
- font-family: Century Gothic;
+  font-family: 'Josefin Sans', sans-serif;
         color: #ffffff;
         text-align: center;
-        font-size:35px;
+        font-size:33px;
         font-weight: bold; 
         text-decoration: underline;
 }
+
 img{
  Display:block;
  margin-left:auto;
 margin-right:auto;
-}
-  .container-fluid {
-    padding-top: 50px;
-    padding-bottom: 70px;
-  }
-  .
-
-p1{
-   font-family: Century Gothic ;
-   color: #FFFFFF;
-   text-align: center; 
-  font-size:5px;
-}
-
-  .bg-1 { 
-    background-color: #003380; 
-    color: #ffffff;
-  }
-  .bg-2 { 
-    background-color: #474e5d; 
-    color: #ffffff;
-  }
-  .bg-3 { 
-    background-color: #003380; 
-    color: #fffff;
-  }
-  .bg-5 { 
-    background-color: #474e5d; 
-    color: #ffffff;
-  }
-a{
-  margin: 0 20px;
-  width: 80px;
-  height: 80px;
-  background-color: #ccc;
-  display: inline-block;
-  border-radius: 24px;
-  box-shadow: 6px 6px 12px rgba(0,0,0,.15),
-              -6px -6px 12px rgba(255,255,255,.1);
-  overflow: hidden;
-  font-size: 28px;
-  transition: .3s linear;
-  position: relative;
-}
-
-a:hover{
-  transform: scale(1.3);
-  border-radius: 50%;
-}
-
-a i::before{
-  position: absolute;
+  object-fit: cover;
+   height: auto;
   width: 100%;
-  height: 100%;
-  text-align: center;
-  background-size: 200% 200%;
-  background-position: 75% 75%;
-  top: 0;
-  left: 0;
-  line-height: 80px;
+/* even more control with max-width */
+  max-width: 700px;
+}
+
+
+.social-buttons a{
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 27px;
+  width: 100px;
+  height: 100px;
+  color: #be9749;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 8px;
+}
+
+.social-buttons a::before{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg,#be9749,#be9749);
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover::before{
+  transform: scale(0);
+}
+
+.social-buttons a i{
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover i{
+  background: linear-gradient(45deg,#008b9b,#bbd7dd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: background .5s linear;
+  transform: scale(2.2);
 }
 
-a:hover i::before{
-  background-position: 0% 0%;
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.3s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
-.fa-facebook-f::before{
-  background-image: linear-gradient(135deg,#3b5998 30%,#0a3d62 50%);
-
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
 
-.fa-instagram::before{
-  background-image: linear-gradient(135deg,#c32aa3 30%,#0a3d62 50%);
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #FFFFFF;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
 }
 
-
-.fa-linkedin-in::before{
-  background-image: linear-gradient(135deg,#007bb5 30%,#0a3d62 50%);
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #be9749;
 }
-.fa-envelope::before{
-  background-image: linear-gradient(135deg,#cda632 30%,#0a3d62 50%);
-} 
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+span{ /* Navbar icon */
+font-size:50px;
+cursor: pointer;
+color:#FFFFFF;
+font-weight: bold; 
+}
+ 
+button{
+  background-color:rgb(0,0,0,0.5); 
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 25px; /*border box size*/
+}
+button:hover {
+  background-color: #be9749 ;
+  color: white;
+}
+
+h5{
+       font-family: 'Catamaran', sans-serif;
+        color: #FFFFFF;
+        text-align: center;
+        font-size:40px;
+        font-weight: bold;
+  }
+
+
+.container {
+  width: 100%;
+  margin-top:-10px;
+border: 2px solid rgba(255,255);
   
 }
-.wrapper{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  padding: 0 20px;
+
+.skills {
+  text-align: center;
+  padding:5px 10px;
+  color: white;
+  animation: load 6s 0s
+ 
 }
+@keyframes load{
+  from {
+    width: 0%
+    
+  }
+}
+
+.html {width: 90%; background-color: #4CAF50;}
+.css {width: 80%; background-color: #2196F3;}
+.js {width: 65%; background-color: #f44336;}
+.python {width: 60%; background-color: 	  #ffcccc;}
+.csharp {width: 60%; background-color: 	#FF69B4;}
+.bootstrap {width: 60%; background-color: 	#8d198d;}
+.tw {width: 60%; background-color: 		  #ffcc00;}
+.com {width: 60%; background-color: 	 #0000ff;}
+.lead {width: 60%; background-color: 		  #66ff99;}
+.time {width: 60%; background-color: 	#0dffff;}
+.persev {width: 60%; background-color: 		   #4775d1;}
+
 
