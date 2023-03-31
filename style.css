@@ -1,70 +1,66 @@
-body{ 
-      background: url(https://cdn.glitch.com/49ca62ab-7d51-4a99-9149-bc3c7718cffe%2F86a1a574-9301-4b56-ba68-e0c26cda8cca.image.png?v=1611099078404) no-repeat center center fixed; 
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-     text-align: center;
-
-} 
-      
-
-h1{
-    font-family: 'Josefin Sans', sans-serif;
-   color: #FFFFFF; 
-     text-align: center;
-     font-size:85px;
+body {
+  background: url(https://cdn.glitch.com/49ca62ab-7d51-4a99-9149-bc3c7718cffe%2F86a1a574-9301-4b56-ba68-e0c26cda8cca.image.png?v=1611099078404)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
 }
 
-
-p{
-   font-family: 'Catamaran', sans-serif;
-   color: #be9749;
-   text-align: center; 
-  font-size:17px;
+h1 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  font-size: 85px;
 }
 
-h2{
-       font-family: 'Catamaran', sans-serif;
-        color: #ffffff;
-        text-align: center;
-        font-size:45px;
-        font-weight: bold;
-  }
+p {
+  font-family: "Catamaran", sans-serif;
+  color: #be9749;
+  text-align: center;
+  font-size: 17px;
+}
+
+h2 {
+  font-family: "Catamaran", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+}
 .box {
- 
   border-radius: 25px; /*border box size*/
   backdrop-filter: blur(8px); /*blur filter for text*/
   max-width: 100%;
   max-height: 100%;
-background-color:rgb(0,0,0,0.5);
-border: 2px solid rgba(255,255);
-box-shadow: 5px 15px 30px -10px rgb(0,0,0,);
-overflow:hidden;
+  background-color: rgb(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255);
+  box-shadow: 5px 15px 30px -10px rgb(0, 0, 0);
+  overflow: hidden;
 }
 
-h3{
-  font-family: 'Josefin Sans', sans-serif;
-        color: #ffffff;
-        text-align: center;
-        font-size:33px;
-        font-weight: bold; 
-        text-decoration: underline;
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  font-size: 33px;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
-img{
- Display:block;
- margin-left:auto;
-margin-right:auto;
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   object-fit: cover;
-   height: auto;
+  height: auto;
   width: 100%;
-/* even more control with max-width */
+  /* even more control with max-width */
   max-width: 700px;
 }
 
-
-.social-buttons a{
+.social-buttons a {
   display: inline-flex;
   text-decoration: none;
   font-size: 27px;
@@ -77,26 +73,26 @@ margin-right:auto;
   margin: 0 8px;
 }
 
-.social-buttons a::before{
+.social-buttons a::before {
   position: absolute;
   width: 60px;
   height: 60px;
-  background: linear-gradient(45deg,#be9749,#be9749);
+  background: linear-gradient(45deg, #be9749, #be9749);
   border-radius: 50%;
   z-index: -1;
   transition: 0.3s ease-in;
 }
 
-.social-buttons a:hover::before{
+.social-buttons a:hover::before {
   transform: scale(0);
 }
 
-.social-buttons a i{
+.social-buttons a i {
   transition: 0.3s ease-in;
 }
 
-.social-buttons a:hover i{
-  background: linear-gradient(45deg,#008b9b,#bbd7dd);
+.social-buttons a:hover i {
+  background: linear-gradient(45deg, #008b9b, #bbd7dd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(2.2);
@@ -104,15 +100,15 @@ margin-right:auto;
 
 /* The Overlay (background) */
 .overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
   height: 100%;
   width: 0;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
-  background-color: rgb(0,0,0); /* Black fallback color */
-  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  background-color: rgb(0, 0, 0); /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.3s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
@@ -131,13 +127,14 @@ margin-right:auto;
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #FFFFFF;
+  color: #ffffff;
   display: block; /* Display block instead of inline */
   transition: 0.3s; /* Transition effects on hover (color) */
 }
 
 /* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
+.overlay a:hover,
+.overlay a:focus {
   color: #be9749;
 }
 
@@ -151,22 +148,25 @@ margin-right:auto;
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
+  .overlay a {
+    font-size: 20px;
+  }
   .overlay .closebtn {
     font-size: 40px;
     top: 15px;
     right: 35px;
   }
 }
-span{ /* Navbar icon */
-font-size:50px;
-cursor: pointer;
-color:#FFFFFF;
-font-weight: bold; 
+span {
+  /* Navbar icon */
+  font-size: 50px;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
 }
- 
-button{
-  background-color:rgb(0,0,0,0.5); 
+
+button {
+  background-color: rgb(0, 0, 0, 0.5);
   color: white;
   text-align: center;
   text-decoration: none;
@@ -177,50 +177,81 @@ button{
   border-radius: 25px; /*border box size*/
 }
 button:hover {
-  background-color: #be9749 ;
+  background-color: #be9749;
   color: white;
 }
 
-h5{
-       font-family: 'Catamaran', sans-serif;
-        color: #FFFFFF;
-        text-align: center;
-        font-size:40px;
-        font-weight: bold;
-  }
-
+h5 {
+  font-family: "Catamaran", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
 
 .container {
   width: 100%;
-  margin-top:-10px;
-border: 2px solid rgba(255,255);
-  
+  margin-top: -10px;
+  border: 2px solid rgba(255, 255);
 }
 
 .skills {
   text-align: center;
-  padding:5px 10px;
+  padding: 5px 10px;
   color: white;
-  animation: load 6s 0s
- 
+  animation: load 6s 0s;
 }
-@keyframes load{
+@keyframes load {
   from {
-    width: 0%
-    
+    width: 0%;
   }
 }
 
-.html {width: 90%; background-color: #4CAF50;}
-.css {width: 80%; background-color: #2196F3;}
-.js {width: 65%; background-color: #f44336;}
-.python {width: 60%; background-color: 	  #ffcccc;}
-.csharp {width: 60%; background-color: 	#FF69B4;}
-.bootstrap {width: 60%; background-color: 	#8d198d;}
-.tw {width: 60%; background-color: 		  #ffcc00;}
-.com {width: 60%; background-color: 	 #0000ff;}
-.lead {width: 60%; background-color: 		  #66ff99;}
-.time {width: 60%; background-color: 	#0dffff;}
-.persev {width: 60%; background-color: 		   #4775d1;}
-
-
+.html {
+  width: 90%;
+  background-color: #4caf50;
+}
+.css {
+  width: 80%;
+  background-color: #2196f3;
+}
+.js {
+  width: 65%;
+  background-color: #f44336;
+}
+.python {
+  width: 60%;
+  background-color: #ffcccc;
+}
+.csharp {
+  width: 60%;
+  background-color: #ff69b4;
+}
+.bootstrap {
+  width: 60%;
+  background-color: #8d198d;
+}
+.tw {
+  width: 60%;
+  background-color: #ffcc00;
+}
+.com {
+  width: 60%;
+  background-color: #0000ff;
+}
+.lead {
+  width: 60%;
+  background-color: #66ff99;
+}
+.time {
+  width: 60%;
+  background-color: #0dffff;
+}
+.persev {
+  width: 60%;
+  background-color: #4775d1;
+}
+.csk {
+  width: 60%;
+  background-color: #ffa500;
+}
